@@ -20,7 +20,6 @@ def cript(name, key1, key2, rkey1, rkey2):
                 b = str(b)
                 a = str(a)
                 a = a + alfa[c - rkey2] + b + alfa[c - rkey1]
-
         newname = newname + a
     return newname
 
@@ -45,6 +44,10 @@ def menu():
         elif esc == 'n':
             ran1 = int(input('Digite um número para ser o terceiro valor da chave [0 para padrão]: '))
             ran2 = int(input('Digite um número para ser o quarto valor da chave [0 para padrão]: '))
+            if ran1 == 0:
+                ran1 = 1
+            if ran2 == 0:
+                ran2 = 2
             break
         else:
             print('Digite novamente, tente digitar apenas s ou n')
